@@ -18,13 +18,12 @@ import post3 from './blog-post.3.md';
 
 const sections = [
   { title: 'Technology', url: '#' },
-  
 ];
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'Portal pendaftaran surat keterangan usaha',
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "Poratal pengajuan surat keterangan usaha ini merupakan salah satu bentuk pelayanan yang diberikan oleh pemerintah kota Tanjungpinang melalui kelurahan batu 9 kepada warga kota Tanjungpinang yang berada di kelurahan batu 9. Dengan adanya portal ini diharapkan dapat mempermudah warga kota Tanjungpinang dalam pengajuan surat keterangan usaha.",
   image: 'https://source.unsplash.com/random',
   imageText: 'main image description',
   linkText: 'Continue reading…',
@@ -32,18 +31,18 @@ const mainFeaturedPost = {
 
 const featuredPosts = [
   {
-    title: 'Featured post',
+    title: 'Berita kelurahan batu 9',
     date: 'Nov 12',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      'Berita terbaru dari kelurahan batu 9',
     image: 'https://source.unsplash.com/random',
     imageLabel: 'Image Text',
   },
   {
-    title: 'Post title',
+    title: 'Berita terbaru',
     date: 'Nov 11',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      'Berita terbaru dari kota Tanjungpinang',
     image: 'https://source.unsplash.com/random',
     imageLabel: 'Image Text',
   },
@@ -52,9 +51,9 @@ const featuredPosts = [
 const posts = [post1, post2, post3];
 
 const sidebar = {
-  title: 'About',
+  title: 'Tentang',
   description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
+    'Portal ini merupakan salah satu bentuk pelayanan yang diberikan oleh pemerintah kota Tanjungpinang melalui kelurahan batu 9 kepada warga kota Tanjungpinang yang berada di kelurahan batu 9. Dengan adanya portal ini diharapkan dapat mempermudah warga kota Tanjungpinang dalam pengajuan surat keterangan usaha.',
   social: [
     { name: 'GitHub', icon: GitHubIcon },
     { name: 'Twitter', icon: TwitterIcon },
@@ -64,12 +63,12 @@ const sidebar = {
 
 const theme = createTheme();
 
-export default function Blog() {
-  return (
+export default function App() {
+  return(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+        <Header title="Portal Pendaftaran Surat Keterangan Usaha" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -78,9 +77,9 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main posts={posts} title="Dari firehose" />
             <Sidebar
-              title={sidebar.title}
+              title={sidebar.title} 
               description={sidebar.description}
               social={sidebar.social}
             />
